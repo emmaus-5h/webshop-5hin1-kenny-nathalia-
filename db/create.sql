@@ -15,7 +15,9 @@ create table artiesten (
   name varchar,
 country TEXT,
   age integer
-  
+  );
+
+
 --
 -- populate with data
 --
