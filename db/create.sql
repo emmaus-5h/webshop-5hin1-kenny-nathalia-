@@ -24,7 +24,11 @@ create table genres (
    name VARCHAR(255)
 );
 
-
+create table album_release (
+  id INTEGER PRIMARY KEY AUTOINCREMENT
+  name varchar
+  year numeric
+);
 
 
 -- populate with data
@@ -46,7 +50,7 @@ insert into products (name, description, code, price, artiesten_id, genres_id) v
 insert into products (name, description, code, price, artiesten_id, genres_id) values ('When We Were Younger', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.', '686928463-6', 14,8,4);
 insert into products (name, description, code, price, artiesten_id, genres_id) values ('Un Verano Sin Ti', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '492662523-7', 14,9,5);
 insert into products (name, description, code, price, artiesten_id, genres_id) values ('Igor', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '492662523-7', 14,4,3);
-insert into products (name, description, code, price, artiesten_id, genres_id values ('epic7', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '492662523-7', 14,11,6);
+insert into products (name, description, code, price, artiesten_id, genres_id values ('Bewitched', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '492662523-7', 14,11,6);
 insert into products (name, description, code, price, artiesten_id, genres_id) values ('epic8', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.', '686928463-6', 14,11,6);
 insert into products (name, description, code, price, artiesten_id, genres_id) values ('epic9', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '492662523-7', 14,11,6);
 insert into products (name, description, code, price, artiesten_id, genres_id) values ('epic10', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '492662523-7', 14,11,6);
@@ -70,3 +74,16 @@ insert into genres (name) values ('rap');
 insert into genres (name) values ('pop');
 insert into genres (name) values ('latin urban');
 insert into genres (name) values ('Not Applicable');
+
+insert into album_release (name, year) values ('Camp Nowhere', 2021 );
+insert into album_release (name, year) values ('Blond', 2016);
+insert into album_release (name, year) values ('Is It A Crime? EP', 2023);
+insert into album_release (name, year) values ('Flower Boy', 2017);
+insert into album_release (name, year) values ('WHO CARES?', 2022);
+insert into album_release (name, year) values ('TEC', 2023);
+insert into album_release (name, year) values ('Nectar', 2020);
+insert into album_release (name, year) values ('HDTV', 2022);
+insert into album_release (name, year) values ('When we were younger', 2023);
+insert into album_release (name, year) values ('Un Verano Sin Ti', 2022);
+insert into album_release (name, year) values ('Igor', 2021);
+insert into album_release (name, year) values 
