@@ -201,5 +201,24 @@ for a "Simple inventory list example with crud using : NodeJS, express framework
 for help almost 24x7 with many questions and problems and providing basic shop called gitpodnode to be further developed by students on gitpod and deplyed freely on heroku. See https://gitpod.io/#https://github.com/Notalifeform/gitpodnode
 
 
+# plan voor api en web 
+1. aanpassen API
+zie video 5 van https://informatica.emmauscollege.nl/opdrachten/webshop/#uitlegvideos-havo
 
+- mapje api/index.js
+- regel: app.get('/api/products', getProducts)
+- /api/products eeft aan waarde webpagina de vraag aan de api stelt
+- getProducts geeft de code die de vraag beantwoord
+- In getProducts staat de sql query voor de database
+- 'SELECT products.id AS id, products.name AS name, products.description AS description, products.code AS code, products.price AS price FROM products ORDER BY name ASC'
+- pas de query aan, zodat er extra velden uit de database worden opgevraagd, Gebruik altijd "AS", bij 1:n moet altijd join gebruikt worden
+- (je krijgt punten als je tenminste IETS in je api doet, hoeft niet per se op je site te komen)
 
+2. aanpassen WEB
+zie video 6 van https://informatica.emmauscollege.nl/opdrachten/webshop/#uitlegvideos-havo
+
+-  mapje web/index.html
+-  onder de regel    <!-- template for product info--> staat het template voor een product
+-  het template wordt gekopieerd voor elk product dat je op je site toont
+-  als je een veld aan het template hebt toegevoegd, dan moet je de waarde erin laten zetten
+  
