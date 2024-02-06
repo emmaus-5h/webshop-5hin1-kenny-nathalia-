@@ -25,9 +25,9 @@ create table genres (
 );
 
 create table album_release (
-  id INTEGER PRIMARY KEY AUTOINCREMENT
-  name varchar
-  year numeric
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name varchar(255),
+  year numeric(10)
 );
 
 
@@ -44,16 +44,16 @@ insert into products (name, description, code, price, artiesten_id, genres_id) v
 insert into products (name, description, code, price, artiesten_id, genres_id) values ('Is It A Crime? EP', 'Pellentesque at nulla. Suspendisse potenti.', '445924201-X', 13.5,3,2);
 insert into products (name, description, code, price, artiesten_id, genres_id) values ('Flower Boy', 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa.', '693155505-7', 13,5,4);
 insert into products (name, description, code, price, artiesten_id, genres_id) values ('WHO CARES?', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.', '686928463-6', 14.5,4,1);
-insert into products (name, description, code, price, artiesten_id, genres_id) values ('TEC', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '492662523-7', 14,6,3);
-insert into products (name, description, code, price, artiesten_id, genres_id) values ('Nectar', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '492662523-7', 14,1,1);
-insert into products (name, description, code, price, artiesten_id, genres_id) values ('HDTV', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '492662523-7', 14,7,4);
+insert into products (name, description, code, price, artiesten_id, genres_id) values ('TEC', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '522662523-7', 14,6,3);
+insert into products (name, description, code, price, artiesten_id, genres_id) values ('Nectar', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '492648523-7', 14,1,1);
+insert into products (name, description, code, price, artiesten_id, genres_id) values ('HDTV', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '685662523-7', 14,7,4);
 insert into products (name, description, code, price, artiesten_id, genres_id) values ('When We Were Younger', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.', '686928463-6', 14,8,4);
-insert into products (name, description, code, price, artiesten_id, genres_id) values ('Un Verano Sin Ti', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '492662523-7', 14,9,5);
-insert into products (name, description, code, price, artiesten_id, genres_id) values ('Igor', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '492662523-7', 14,4,3);
-insert into products (name, description, code, price, artiesten_id, genres_id values ('Bewitched', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '492662523-7', 14,11,6);
-insert into products (name, description, code, price, artiesten_id, genres_id) values ('epic8', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.', '686928463-6', 14,11,6);
-insert into products (name, description, code, price, artiesten_id, genres_id) values ('epic9', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '492662523-7', 14,11,6);
-insert into products (name, description, code, price, artiesten_id, genres_id) values ('epic10', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '492662523-7', 14,11,6);
+insert into products (name, description, code, price, artiesten_id, genres_id) values ('Un Verano Sin Ti', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '492821523-7', 14,9,5);
+insert into products (name, description, code, price, artiesten_id, genres_id) values ('Igor', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '420562523-7', 14,4,3);
+insert into products (name, description, code, price, artiesten_id, genres_id values ('epic 7', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '792663123-7', 14,11,6);
+insert into products (name, description, code, price, artiesten_id, genres_id) values ('Bewichted', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.', '686928463-6', 14,11,6);
+insert into products (name, description, code, price, artiesten_id, genres_id) values ('epic09', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '772662523-7', 14,11,6);
+insert into products (name, description, code, price, artiesten_id, genres_id) values ('epic10', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '492062523-7', 14,11,6);
 insert into products (name, description, code, price, artiesten_id, genres_id) values ('epic11', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '492662523-7', 14,11,6);
 
 insert into artiesten (name, country, age) values ('Joji', 'USA', 31);
@@ -83,7 +83,7 @@ insert into album_release (name, year) values ('WHO CARES?', 2022);
 insert into album_release (name, year) values ('TEC', 2023);
 insert into album_release (name, year) values ('Nectar', 2020);
 insert into album_release (name, year) values ('HDTV', 2022);
-insert into album_release (name, year) values ('When we were younger', 2023);
+insert into album_release (name, year) values ('When We Were Younger', 2023);
 insert into album_release (name, year) values ('Un Verano Sin Ti', 2022);
 insert into album_release (name, year) values ('Igor', 2021);
-insert into album_release (name, year) values 
+insert into album_release (name, year) values ('Bewitched, 2023')
