@@ -69,6 +69,7 @@ insert into products (name, description, code, price, artiesten_id, genres_id) v
 insert into products (name, description, code, price, artiesten_id, genres_id) values ('channel ORANGE', 'balhahs', '5486147851-4', 14,10,2);
 insert into products (name, description, code, price, artiesten_id, genres_id) values ('To Pimp A Butterfly', 'hehehe', '9542587154-8', 14,18,3);
 insert into products (name, description, code, price, artiesten_id, genres_id) values ('good kid, m.A.A.d city', 'hehehhe', '8945175274-9', 14,18,3); 
+insert into products (name, description, code, price, artiesten_id, genres_id) values ('After Hours', 'Abel', '8945175274-9', 14,19,2); 
 
 --nog meer EP's? 
 
@@ -89,7 +90,7 @@ insert into artiesten (name, country, age) values ('Beabadoobee', 'UK', 23);
 insert into artiesten (name, country, age) values ('Daniel Caesar', 'USA', 28);
 insert into artiesten (name, country, age) values ('Brent Faiyaz', 'USA', 28);
 insert into artiesten (name, country, age) values ('Kendrick Lamar', 'USA', 36);
-
+insert into artiesten (name, country, age) values ('The Weeknd', 'USA', 33);
 
 insert into genres (name) values ('Alternative/indie');
 insert into genres (name) values ('R&B/soul');
