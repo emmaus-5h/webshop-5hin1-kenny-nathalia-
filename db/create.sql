@@ -37,6 +37,11 @@ create table type (
   artiesten_id integer
   );
 
+create table streaming_platforms (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  platform varchar(255),
+  artiesten_id   varchar(255)
+)
 
 -- populate with data
 --
@@ -91,6 +96,7 @@ insert into artiesten (name, country, age) values ('Daniel Caesar', 'USA', 28);
 insert into artiesten (name, country, age) values ('Brent Faiyaz', 'USA', 28);
 insert into artiesten (name, country, age) values ('Kendrick Lamar', 'USA', 36);
 insert into artiesten (name, country, age) values ('The Weeknd', 'USA', 33);
+
 
 insert into genres (name) values ('Alternative/indie');
 insert into genres (name) values ('R&B/soul');
