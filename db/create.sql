@@ -37,11 +37,11 @@ create table type (
   artiesten_id integer
   );
 
-create table streaming_platforms (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  platform varchar(255),
-  artiesten_id   varchar(255)
-)
+--create table streaming_platforms (
+  --id INTEGER PRIMARY KEY AUTOINCREMENT,
+  --platform varchar(255),
+  --artiesten_id   varchar(255)
+----)
 
 -- populate with data
 --
@@ -68,7 +68,7 @@ insert into products (name, description, code, price, artiesten_id, genres_id) v
 insert into products (name, description, code, price, artiesten_id, genres_id) values ('Beatopia', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '492662523-7', 14,14,1);
 insert into products (name, description, code, price, artiesten_id, genres_id) values ('Our Extended Play', 'swag', '3416438743-0', 14,14,1); 
 insert into products (name, description, code, price, artiesten_id, genres_id) values ('NEVER ENOUGH', 'caeser salad lol', '8145725486-7', 14,15,2);
-insert into products (name, description, code, price, artiesten_id, genres_id) values ('Freudian', 'blablabaa', 5435952457-2, 14,15,2);
+insert into products (name, description, code, price, artiesten_id, genres_id) values ('Freudian', 'blablabaa', '5435952457-2', 14,15,2);
 insert into products (name, description, code, price, artiesten_id, genres_id) values ('Lost', 'blahbalh', '6527852148-9', 14,16,2);
 insert into products (name, description, code, price, artiesten_id, genres_id) values ('Sonder Son', 'blahdhaj', '7157814974-7', 14,17,2);
 insert into products (name, description, code, price, artiesten_id, genres_id) values ('channel ORANGE', 'balhahs', '5486147851-4', 14,10,2);
