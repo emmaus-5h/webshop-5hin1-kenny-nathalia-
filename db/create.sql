@@ -37,11 +37,18 @@ create table type (
   artiesten_id integer
   );
 
---create table streaming_platforms (
-  --id INTEGER PRIMARY KEY AUTOINCREMENT,
-  --platform varchar(255),
-  --artiesten_id   varchar(255)
-----)
+create table streaming_platforms (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  platform varchar(255),
+);
+
+create table streaming_platforms_artiesten
+  streaming_platforms_id integer,
+  artiesten_id integer
+  primary key (streaming_platforms_id, artiesten_id)
+  foreign key (streaming_platforms_id) references streaming_platforms
+  foreign key (artiesten_id) references artiesten
+  );
 
 -- populate with data
 --
@@ -51,21 +58,21 @@ create table type (
 -- want different data? check: https://www.mockaroo.com/910b6c20
 --
 
-insert into products (name, description, code, price, artiesten_id, genres_id) values ('Camp Nowhere', 'peachtree rascals, rhoncus sed, vestibulum sit amet, cursus id.', '816905633-0', 10.5,2,1);
-insert into products (name, description, code, price, artiesten_id, genres_id) values ('Blond', 'Nulla ut erat id mauris vulputate elementum. Nullam varius.', '077030122-3', 11,10,4);
-insert into products (name, description, code, price, artiesten_id, genres_id) values ('Is It A Crime?', 'Pellentesque at nulla. Suspendisse potenti.', '445924201-X', 13.5,3,2);
-insert into products (name, description, code, price, artiesten_id, genres_id) values ('Flower Boy', 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa.', '693155505-7', 13,5,3);
-insert into products (name, description, code, price, artiesten_id, genres_id) values ('WHO CARES?', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.', '686928463-6', 14.5,4,1);
-insert into products (name, description, code, price, artiesten_id, genres_id) values ('TEC', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '522662523-7', 14,6,3);
-insert into products (name, description, code, price, artiesten_id, genres_id) values ('Nectar', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '492648523-7', 14,1,1);
-insert into products (name, description, code, price, artiesten_id, genres_id) values ('HDTV', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '685662523-7', 14,7,4);
-insert into products (name, description, code, price, artiesten_id, genres_id) values ('When We Were Younger', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.', '686928463-6', 14,8,4);
-insert into products (name, description, code, price, artiesten_id, genres_id) values ('Un Verano Sin Ti', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '492821523-7', 14,9,5);
-insert into products (name, description, code, price, artiesten_id, genres_id) values ('Igor', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '420562523-7', 14,4,3);
-insert into products (name, description, code, price, artiesten_id, genres_id) values ('Bewitched', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.', '686928463-6', 14,12,7);
-insert into products (name, description, code, price, artiesten_id, genres_id) values ('Cigarettes After Sex', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '772662523-7', 14,13,4);
-insert into products (name, description, code, price, artiesten_id, genres_id) values ('Cry', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '492062523-7', 14,13,4);
-insert into products (name, description, code, price, artiesten_id, genres_id) values ('Beatopia', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '492662523-7', 14,14,1);
+insert into products (name, description, code, price, artiesten_id, genres_id) values ('Camp Nowhere', 'omd', '816905633-0', 10.5,2,1);
+insert into products (name, description, code, price, artiesten_id, genres_id) values ('Blond', 'yja', '077030122-3', 11,10,4);
+insert into products (name, description, code, price, artiesten_id, genres_id) values ('Is It A Crime?', 'whoopsie', '445924201-X', 13.5,3,2);
+insert into products (name, description, code, price, artiesten_id, genres_id) values ('Flower Boy', 'gras', '693155505-7', 13,5,3);
+insert into products (name, description, code, price, artiesten_id, genres_id) values ('WHO CARES?', 'swag', '686928463-6', 14.5,4,1);
+insert into products (name, description, code, price, artiesten_id, genres_id) values ('TEC', 'swag', '522662523-7', 14,6,3);
+insert into products (name, description, code, price, artiesten_id, genres_id) values ('Nectar', 'oooj', '492648523-7', 14,1,1);
+insert into products (name, description, code, price, artiesten_id, genres_id) values ('HDTV', 'afff.', '685662523-7', 14,7,4);
+insert into products (name, description, code, price, artiesten_id, genres_id) values ('When We Were Younger', 'sawhg', '686928463-6', 14,8,4);
+insert into products (name, description, code, price, artiesten_id, genres_id) values ('Un Verano Sin Ti', 'swag', '492821523-7', 14,9,5);
+insert into products (name, description, code, price, artiesten_id, genres_id) values ('Igor', 'omd', '420562523-7', 14,4,3);
+insert into products (name, description, code, price, artiesten_id, genres_id) values ('Bewitched', 'umm', '686928463-6', 14,12,7);
+insert into products (name, description, code, price, artiesten_id, genres_id) values ('Cigarettes After Sex', 'ehhhhh', '772662523-7', 14,13,4);
+insert into products (name, description, code, price, artiesten_id, genres_id) values ('Cry', 'tja.', '492062523-7', 14,13,4);
+insert into products (name, description, code, price, artiesten_id, genres_id) values ('Beatopia', 'mhm', '492662523-7', 14,14,1);
 insert into products (name, description, code, price, artiesten_id, genres_id) values ('Our Extended Play', 'swag', '3416438743-0', 14,14,1); 
 insert into products (name, description, code, price, artiesten_id, genres_id) values ('NEVER ENOUGH', 'caeser salad lol', '8145725486-7', 14,15,2);
 insert into products (name, description, code, price, artiesten_id, genres_id) values ('Freudian', 'blablabaa', '5435952457-2', 14,15,2);
@@ -85,7 +92,7 @@ insert into artiesten (name, country, age) values ('Tyler The Creator', 'USA', 3
 insert into artiesten (name, country, age) values ('Rex Orange County', 'UK', 25);
 insert into artiesten (name, country, age) values ('Lil Tecca', 'USA', 21);
 insert into artiesten (name, country, age) values ('Tai Verdes', 'USA', 28);
-insert into artiesten (name, country, age) values ('Grent Perez', 'AUS', 22);
+insert into artiesten (name, country, age) values ('Grentperez', 'AUS', 22);
 insert into artiesten (name, country, age) values ('Bad Bunny', 'PR', 29);
 insert into artiesten (name, country, age) values ('Frank Ocean', 'USA', 36);
 insert into artiesten (name, country, age) values ('Not Applicable', '?', 0);
@@ -156,3 +163,98 @@ insert into type (name, type, artiesten_id) values ('channel ORANGE', 'album', 1
 insert into type (name, type, artiesten_id) values ('To Pimp A Butterly', 'album',17);
 insert into type (name, type, artiesten_id) values ('good kid, m.A.A.d city', 'album', 18);
 
+
+insert into streaming_platforms (platform) values ('Spotify');
+insert into streaming_platforms (platform) values ('Apple Music');
+insert into streaming_platforms (platform) values ('Deezer');
+insert into streaming_platforms (platform) values ('Youtube');
+insert into streaming_platforms (platform) values ('Amazon Music');
+
+--n:m 
+
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (1, 1);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (1, 2);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (1, 3);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (1, 4);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (1, 5);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (1, 6);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (1, 7);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (1, 8);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (1, 9);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (1, 10);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (1, 12);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (1, 13);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (1, 14);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (1, 15);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (1, 16);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (1, 17);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (1, 18);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (2, 1);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (2, 2);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (2, 3);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (2, 4);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (2, 5);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (2, 6);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (2, 7);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (2, 8);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (2, 9);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (2, 10);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (2, 12);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (2, 13);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (2, 14);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (2, 15);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (2, 16);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (2, 17);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (2, 18);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (3, 1);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (3, 2);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (3, 3);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (3, 4);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (3, 5);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (3, 6);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (3, 7);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (3, 8);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (3, 9);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (3, 10);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (3, 12);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (3, 13);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (3, 14);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (3, 14);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (3, 15);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (3, 16);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (3, 17);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (3, 18);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (4, 1);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (4, 2);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (4, 3);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (4, 4);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (4, 5);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (4, 6);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (4, 7);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (4, 8);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (4, 9);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (4, 10);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (4, 12);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (4, 13);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (4, 14);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (4, 15);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (4, 16);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (4, 17);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (4, 18);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (5, 1);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (5, 2);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (5, 3);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (5, 4);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (5, 5);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (5, 6);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (5, 7);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (5, 8);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (5, 9);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (5, 10);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (5, 12);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (5, 13);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (5, 14);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (5, 15);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (5, 16);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (5, 17);
+insert into streaming_platforms_artiesten (streaming_platforms_id, artiesten_id) values (5, 18);
